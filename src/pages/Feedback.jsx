@@ -29,7 +29,7 @@ function Feedback() {
               提交 GitHub Issue
             </a>
             <p className="text-gray-500 text-sm">
-              或发送邮件至 <a href="mailto:support@openclaw.dev" className="text-emerald-600 hover:underline">support@openclaw.dev</a>
+              或发送邮件至 <a href="mailto:1498243830@qq.com" className="text-emerald-600 hover:underline">1498243830@qq.com</a>
             </p>
           </div>
         </div>
