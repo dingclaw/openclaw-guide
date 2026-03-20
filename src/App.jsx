@@ -6,7 +6,7 @@ import Feedback from './pages/Feedback'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/openclaw-guide">
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <Routes>
