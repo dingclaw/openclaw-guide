@@ -18,15 +18,20 @@ function Feedback() {
             遇到问题或有建议？我们很乐意听取您的反馈。请通过以下方式联系我们：
           </p>
 
-          <a
-            href="https://openclaw.feishu.cn/share/base/form/xxxxx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-          >
-            <span>📝</span>
-            填写反馈表单
-          </a>
+          <div className="space-y-4">
+            <a
+              href="https://github.com/dingclaw/openclaw-guide/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+            >
+              <span>📝</span>
+              提交 GitHub Issue
+            </a>
+            <p className="text-gray-500 text-sm">
+              或发送邮件至 <a href="mailto:support@openclaw.dev" className="text-emerald-600 hover:underline">support@openclaw.dev</a>
+            </p>
+          </div>
         </div>
 
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">

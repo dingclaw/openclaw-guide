@@ -93,18 +93,18 @@ function Guide() {
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-emerald-600 hover:underline flex items-center gap-2">
-                  <span>📖</span> 完整文档
+                <a href="https://github.com/dingclaw/openclaw-guide" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline flex items-center gap-2">
+                  <span>📖</span> GitHub 仓库
                 </a>
               </li>
               <li>
-                <a href="#" className="text-emerald-600 hover:underline flex items-center gap-2">
+                <a href="https://github.com/dingclaw/openclaw-guide/tree/main/examples" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline flex items-center gap-2">
                   <span>💡</span> 示例项目
                 </a>
               </li>
               <li>
-                <a href="#" className="text-emerald-600 hover:underline flex items-center gap-2">
-                  <span>🎓</span> 视频教程
+                <a href="https://github.com/dingclaw/openclaw-guide/wiki" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline flex items-center gap-2">
+                  <span>🎓</span> Wiki 文档
                 </a>
               </li>
             </ul>
