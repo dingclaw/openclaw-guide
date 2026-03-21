@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Timeline from '../components/Timeline'
+import Capabilities from '../components/Capabilities'
 
 function Home() {
   const [stats, setStats] = useState({
@@ -214,43 +215,9 @@ function Home() {
           </div>
         </div>
 
-        {/* Use Cases */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">应用场景</h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/50 backdrop-blur p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                <span>💼</span> 企业助手
-              </h3>
-              <p className="text-gray-600 text-sm">
-                自动化办公流程、智能问答、文档处理，提升团队效率。
-              </p>
-            </div>
-            <div className="bg-white/50 backdrop-blur p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                <span>🎨</span> 创意生成
-              </h3>
-              <p className="text-gray-600 text-sm">
-                内容创作、设计辅助、灵感激发，释放创造力。
-              </p>
-            </div>
-            <div className="bg-white/50 backdrop-blur p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                <span>📊</span> 数据分析
-              </h3>
-              <p className="text-gray-600 text-sm">
-                自动生成报告、数据可视化、智能洞察。
-              </p>
-            </div>
-            <div className="bg-white/50 backdrop-blur p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                <span>🤝</span> 客户服务
-              </h3>
-              <p className="text-gray-600 text-sm">
-                7x24 小时智能客服，自动处理常见问题。
-              </p>
-            </div>
-          </div>
+        {/* OpenClaw 能力展示 */}
+        <div className="mt-20 max-w-6xl mx-auto">
+          <Capabilities />
         </div>
       </div>
 
