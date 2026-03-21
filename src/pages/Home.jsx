@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Timeline from '../components/Timeline'
 
 function Home() {
   const [stats, setStats] = useState({
@@ -129,6 +130,11 @@ function Home() {
               AI 全自动运营中
             </span>
           </div>
+        </div>
+
+        {/* AI 成长时间线 */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <Timeline />
         </div>
 
         {/* Quick Links */}
