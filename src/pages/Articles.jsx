@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 const articles = [
   {
     id: 'self-improvement',
-    title: 'Self-Improving Agent Skill',
-    subtitle: '让 AI 拥有记忆与学习能力',
+    title: '如何安装和配置 Self-Improving Agent 技能',
+    subtitle: '让你的 OpenClaw 持续进化',
     description: '一个让 AI 助手持续进化的 OpenClaw Skill，通过日志记录错误、学习和功能请求。',
     tags: ['OpenClaw', 'Skill', 'AI'],
     date: '2026-03-21',
