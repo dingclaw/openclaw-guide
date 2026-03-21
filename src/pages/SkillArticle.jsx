@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 function SkillArticle() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <Link to="/" className="text-emerald-600 hover:text-emerald-700 mb-8 inline-block">
-        ← 返回首页
+      <Link to="/articles" className="text-emerald-600 hover:text-emerald-700 mb-8 inline-block">
+        ← 返回文章列表
       </Link>
       
       <article className="prose prose-lg max-w-none">
