@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import CodeBlock from '../components/CodeBlock'
 
 const articles = {
   'self-improvement': {
@@ -6,6 +7,31 @@ const articles = {
     subtitle: '让 AI 拥有记忆与学习能力'
   }
 }
+
+const files = [
+  { name: 'LEARNINGS.md', desc: '记录纠正、知识缺口、最佳实践' },
+  { name: 'ERRORS.md', desc: '记录命令失败、异常错误' },
+  { name: 'FEATURE_REQUESTS.md', desc: '记录用户请求的新功能' }
+]
+
+const scenarios = [
+  { trigger: '命令/操作失败', action: '→ 记录到 ERRORS.md' },
+  { trigger: '用户纠正 AI', action: '→ 记录到 LEARNINGS.md' },
+  { trigger: '发现更好方法', action: '→ 记录到 LEARNINGS.md' },
+  { trigger: '用户想要新功能', action: '→ 记录到 FEATURE_REQUESTS.md' }
+]
+
+const promotionTargets = [
+  { type: '行为模式', target: 'SOUL.md', example: '简洁回复，避免免责声明' },
+  { type: '工作流改进', target: 'AGENTS.md', example: '长任务启动子智能体' },
+  { type: '工具陷阱', target: 'TOOLS.md', example: 'git push 需要先配置认证' }
+]
+
+const sessionTools = [
+  { tool: 'sessions_list', desc: '查看活跃会话' },
+  { tool: 'sessions_history', desc: '读取其他会话记录' },
+  { tool: 'sessions_send', desc: '发送学习内容' }
+]
 
 function SkillArticle() {
   const { id } = useParams()
@@ -80,35 +106,30 @@ function SkillArticle() {
             </h2>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">2.1 ClawdHub 安装（推荐）</h3>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm whitespace-nowrap block">clawdhub install self-improving-agent</code>
-            </div>
+            <CodeBlock>clawdhub install self-improving-agent</CodeBlock>
+            <p className="text-gray-600 mb-4 text-sm sm:text-base">安装后，skill 会自动加载到 OpenClaw 工作空间。</p>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">2.2 手动安装</h3>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm whitespace-pre-wrap break-all block">git clone https://github.com/peterskoett/self-improving-agent.git ~/.openclaw/skills/self-improving-agent</code>
-            </div>
+            <CodeBlock multiline>git clone https://github.com/peterskoett/self-improving-agent.git ~/.openclaw/skills/self-improving-agent</CodeBlock>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">2.3 创建学习文件</h3>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm block">mkdir -p ~/.openclaw/workspace/.learnings</code>
-            </div>
+            <CodeBlock>mkdir -p ~/.openclaw/workspace/.learnings</CodeBlock>
             <p className="text-gray-600 mb-4 text-sm sm:text-base">创建三个核心文件：</p>
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-4">
-              <div className="divide-y divide-gray-100 text-sm">
-                <div className="flex">
-                  <div className="bg-emerald-50 px-3 py-2.5 font-mono text-xs text-emerald-700">LEARNINGS.md</div>
-                  <div className="px-3 py-2.5 text-gray-600 text-xs sm:text-sm">记录纠正、最佳实践</div>
+            
+            {/* 文件列表 - 修复对齐 */}
+            <div className="space-y-2 mb-4">
+              {files.map((file, index) => (
+                <div key={index} className="flex items-start gap-3 bg-white rounded-lg border border-gray-200 p-3">
+                  <div className="flex-shrink-0 min-w-[140px]">
+                    <code className="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded font-mono">
+                      {file.name}
+                    </code>
+                  </div>
+                  <div className="text-gray-600 text-xs sm:text-sm pt-1">
+                    {file.desc}
+                  </div>
                 </div>
-                <div className="flex">
-                  <div className="bg-emerald-50 px-3 py-2.5 font-mono text-xs text-emerald-700">ERRORS.md</div>
-                  <div className="px-3 py-2.5 text-gray-600 text-xs sm:text-sm">记录命令失败、异常</div>
-                </div>
-                <div className="flex">
-                  <div className="bg-emerald-50 px-3 py-2.5 font-mono text-xs text-emerald-700">FEATURE_REQUESTS.md</div>
-                  <div className="px-3 py-2.5 text-gray-600 text-xs sm:text-sm">记录功能请求</div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
           
@@ -119,25 +140,17 @@ function SkillArticle() {
             </h2>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">3.1 触发场景</h3>
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-4">
-              <div className="divide-y divide-gray-100 text-sm">
-                <div className="flex">
-                  <div className="w-28 sm:w-32 bg-gray-50 px-3 py-2.5 text-gray-600 flex-shrink-0">命令失败</div>
-                  <div className="px-3 py-2.5 text-gray-600">→ 记录到 ERRORS.md</div>
+            <div className="space-y-2 mb-4">
+              {scenarios.map((s, index) => (
+                <div key={index} className="flex items-center gap-2 bg-white rounded-lg border border-gray-200 p-3 text-sm">
+                  <div className="min-w-[100px] sm:min-w-[120px] text-gray-600 flex-shrink-0">
+                    {s.trigger}
+                  </div>
+                  <div className="text-emerald-600">
+                    {s.action}
+                  </div>
                 </div>
-                <div className="flex">
-                  <div className="w-28 sm:w-32 bg-gray-50 px-3 py-2.5 text-gray-600 flex-shrink-0">用户纠正</div>
-                  <div className="px-3 py-2.5 text-gray-600">→ 记录到 LEARNINGS.md</div>
-                </div>
-                <div className="flex">
-                  <div className="w-28 sm:w-32 bg-gray-50 px-3 py-2.5 text-gray-600 flex-shrink-0">发现新方法</div>
-                  <div className="px-3 py-2.5 text-gray-600">→ 记录到 LEARNINGS.md</div>
-                </div>
-                <div className="flex">
-                  <div className="w-28 sm:w-32 bg-gray-50 px-3 py-2.5 text-gray-600 flex-shrink-0">想要新功能</div>
-                  <div className="px-3 py-2.5 text-gray-600">→ 记录到 FEATURE_REQUESTS.md</div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
           
@@ -149,31 +162,25 @@ function SkillArticle() {
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">4.1 Hook 集成</h3>
             <p className="text-gray-600 mb-3 text-sm sm:text-base">Hook 可以在特定时机自动触发：</p>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm whitespace-pre block"># 复制 hook
+            <CodeBlock multiline>{`# 复制 hook
 cp -r hooks/openclaw ~/.openclaw/hooks/self-improvement
 
 # 启用
-openclaw hooks enable self-improvement</code>
-            </div>
+openclaw hooks enable self-improvement`}</CodeBlock>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">4.2 知识推广</h3>
             <p className="text-gray-600 mb-3 text-sm sm:text-base">当学习具有广泛适用性时，推广到项目记忆文件：</p>
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-4">
-              <div className="divide-y divide-gray-100 text-sm">
-                <div className="flex">
-                  <div className="w-24 sm:w-28 bg-gray-50 px-3 py-2.5 text-gray-600 flex-shrink-0">行为模式</div>
-                  <div className="px-3 py-2.5"><code className="text-xs bg-gray-100 px-1 rounded">SOUL.md</code></div>
+            <div className="space-y-2 mb-4">
+              {promotionTargets.map((item, index) => (
+                <div key={index} className="flex items-center gap-3 bg-white rounded-lg border border-gray-200 p-3 text-sm">
+                  <div className="min-w-[80px] text-gray-600 flex-shrink-0">
+                    {item.type}
+                  </div>
+                  <code className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded">
+                    {item.target}
+                  </code>
                 </div>
-                <div className="flex">
-                  <div className="w-24 sm:w-28 bg-gray-50 px-3 py-2.5 text-gray-600 flex-shrink-0">工作流</div>
-                  <div className="px-3 py-2.5"><code className="text-xs bg-gray-100 px-1 rounded">AGENTS.md</code></div>
-                </div>
-                <div className="flex">
-                  <div className="w-24 sm:w-28 bg-gray-50 px-3 py-2.5 text-gray-600 flex-shrink-0">工具陷阱</div>
-                  <div className="px-3 py-2.5"><code className="text-xs bg-gray-100 px-1 rounded">TOOLS.md</code></div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
           
@@ -185,21 +192,17 @@ openclaw hooks enable self-improvement</code>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">5.1 跨会话通信</h3>
             <p className="text-gray-600 mb-3 text-sm sm:text-base">OpenClaw 提供工具实现学习共享：</p>
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-4">
-              <div className="divide-y divide-gray-100 text-sm">
-                <div className="flex">
-                  <div className="bg-emerald-50 px-3 py-2.5 font-mono text-xs text-emerald-700">sessions_list</div>
-                  <div className="px-3 py-2.5 text-gray-600 text-xs sm:text-sm">查看活跃会话</div>
+            <div className="space-y-2 mb-4">
+              {sessionTools.map((tool, index) => (
+                <div key={index} className="flex items-center gap-3 bg-white rounded-lg border border-gray-200 p-3 text-sm">
+                  <code className="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded font-mono flex-shrink-0">
+                    {tool.tool}
+                  </code>
+                  <span className="text-gray-600">
+                    {tool.desc}
+                  </span>
                 </div>
-                <div className="flex">
-                  <div className="bg-emerald-50 px-3 py-2.5 font-mono text-xs text-emerald-700">sessions_history</div>
-                  <div className="px-3 py-2.5 text-gray-600 text-xs sm:text-sm">读取其他会话记录</div>
-                </div>
-                <div className="flex">
-                  <div className="bg-emerald-50 px-3 py-2.5 font-mono text-xs text-emerald-700">sessions_send</div>
-                  <div className="px-3 py-2.5 text-gray-600 text-xs sm:text-sm">发送学习内容</div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
           
