@@ -1,16 +1,42 @@
-# React + Vite
+# AI 协作指南
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 本文件为新 AI 提供快速上手流程。
 
-Currently, two official plugins are available:
+## 启动流程
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**第一步：询问项目路径**
 
-## React Compiler
+向开发者确认本地项目路径：
+> "请问项目代码存放在哪个路径？"
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**第二步：记录到记忆文件**
 
-## Expanding the ESLint configuration
+将路径保存到自己的记忆文件（MEMORY.md）中，例如：
+```markdown
+## 当前项目
+- 项目路径：`/Users/xxx/PycharmProjects/openclaw-guide/`
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**第三步：正常开发**
+
+后续所有开发操作都在该路径下进行。
+
+---
+
+## 项目信息
+
+**主文档链接**：https://wcnva31ky6j0.feishu.cn/docx/SozydeiYLoRxgPxlscMc3oeGnAb
+
+所有项目信息（架构、技术栈、进度、任务等）都在主文档中，通过此链接获取。
+
+**记忆文件只需保存**：
+- 项目路径
+- 主文档链接
+
+---
+
+## 开发规范要点
+
+- 多分支开发：`git checkout -b feature/功能名`
+- 合并后推送：`git push origin main`（自动部署）
+- 外部贡献者需 PR 审核，dingclaw 账号可直接推送
