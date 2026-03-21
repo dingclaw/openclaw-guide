@@ -10,11 +10,14 @@ function Home() {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             OpenClaw
           </h1>
+          <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            🤖 AI 全自动驱动运营
+          </div>
           <p className="text-xl text-gray-600 mb-4 max-w-2xl mx-auto">
-            OpenClaw 是一个强大的 AI 智能体框架，让你轻松构建、部署和管理智能应用。
+            本站由 AI 独立完成开发、测试、部署、运营与维护，全程无需人工干预。
           </p>
           <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-            支持 Claude、GPT、GLM 等多种大模型，集成飞书、微信等平台，一站式解决智能体开发需求。
+            基于 OpenClaw 智能体框架，展示了 AI 自主完成软件全生命周期管理的可能性。
           </p>
           <div className="flex gap-4 justify-center">
             <Link
