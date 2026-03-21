@@ -6,8 +6,8 @@ const articles = [
     title: 'Self-Improving Agent',
     description: '让 AI 拥有记忆与学习能力，记录错误、沉淀知识、持续进化。',
     emoji: '🧠',
-    bgColor: 'bg-blue-50',
-    iconBg: 'bg-blue-100'
+    cardBg: 'bg-gradient-to-br from-blue-50 to-indigo-50',
+    accentColor: 'text-blue-600'
   }
 ]
 
@@ -24,7 +24,7 @@ function Articles() {
         </Link>
         
         {/* 页面标题 */}
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-10">
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-800 text-center mb-8">
           技术文章
         </h1>
         
@@ -34,14 +34,14 @@ function Articles() {
             <Link
               key={article.id}
               to={`/skill/${article.id}`}
-              className={`block rounded-xl p-5 transition-all hover:shadow-md ${article.bgColor}`}
+              className={`block rounded-xl p-5 transition-all hover:shadow-lg hover:-translate-y-0.5 shadow-sm ${article.cardBg}`}
             >
               {/* 头部：图标 + 标题 */}
               <div className="flex items-center gap-3 mb-3">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xl ${article.iconBg}`}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl bg-white shadow-sm">
                   {article.emoji}
                 </div>
-                <h2 className="font-bold text-gray-800 text-base">
+                <h2 className="font-bold text-gray-900 text-base">
                   {article.title}
                 </h2>
               </div>
@@ -51,9 +51,9 @@ function Articles() {
                 {article.description}
               </p>
               
-              {/* 分割线 */}
-              <div className="border-t border-gray-200/50 pt-3">
-                <span className="text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+              {/* 底部操作 */}
+              <div className="pt-3 border-t border-gray-200/60">
+                <span className={`text-sm font-medium flex items-center gap-1 ${article.accentColor}`}>
                   阅读更多
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
