@@ -3,8 +3,8 @@ import CodeBlock from '../components/CodeBlock'
 
 const articles = {
   'self-improvement': {
-    title: 'Self-Improving Agent Skill',
-    subtitle: '让 AI 拥有记忆与学习能力'
+    title: '如何安装和配置 Self-Improving Agent 技能',
+    subtitle: '让你的 OpenClaw 持续进化'
   }
 }
 
