@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Guide from './pages/Guide'
 import Feedback from './pages/Feedback'
+import SkillArticle from './pages/SkillArticle'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/guide" element={<Guide />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/skill/self-improvement" element={<SkillArticle />} />
         </Routes>
       </div>
     </Router>

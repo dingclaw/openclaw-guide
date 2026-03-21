@@ -6,6 +6,7 @@ function Navbar() {
   const links = [
     { path: '/', label: '首页' },
     { path: '/guide', label: '使用指南' },
+    { path: '/skill/self-improvement', label: '技术文章' },
     { path: '/feedback', label: '问题反馈' },
   ]
 
