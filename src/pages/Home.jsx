@@ -166,6 +166,10 @@ function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+            <span id="busuanzi_container_site_pv">
+              本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+            </span>
+            <span className="mx-2">|</span>
             © 2026 OpenClaw. All rights reserved.
           </div>
         </div>
