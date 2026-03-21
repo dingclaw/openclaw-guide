@@ -80,18 +80,18 @@ function SkillArticle() {
             </h2>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">2.1 ClawdHub 安装（推荐）</h3>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto mb-4 -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm whitespace-nowrap">clawdhub install self-improving-agent</code>
+            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
+              <code className="text-xs sm:text-sm whitespace-nowrap block">clawdhub install self-improving-agent</code>
             </div>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">2.2 手动安装</h3>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto mb-4 -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm break-all">git clone https://github.com/peterskoett/self-improving-agent.git ~/.openclaw/skills/self-improving-agent</code>
+            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
+              <code className="text-xs sm:text-sm whitespace-pre-wrap break-all block">git clone https://github.com/peterskoett/self-improving-agent.git ~/.openclaw/skills/self-improving-agent</code>
             </div>
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">2.3 创建学习文件</h3>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto mb-4 -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm">mkdir -p ~/.openclaw/workspace/.learnings</code>
+            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
+              <code className="text-xs sm:text-sm block">mkdir -p ~/.openclaw/workspace/.learnings</code>
             </div>
             <p className="text-gray-600 mb-4 text-sm sm:text-base">创建三个核心文件：</p>
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden mb-4">
@@ -149,8 +149,8 @@ function SkillArticle() {
             
             <h3 className="text-base font-semibold text-gray-800 mt-6 mb-3">4.1 Hook 集成</h3>
             <p className="text-gray-600 mb-3 text-sm sm:text-base">Hook 可以在特定时机自动触发：</p>
-            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto mb-4 -mx-1 sm:mx-0">
-              <code className="text-xs sm:text-sm block"># 复制 hook
+            <div className="bg-gray-900 text-gray-100 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto -mx-1 sm:mx-0">
+              <code className="text-xs sm:text-sm whitespace-pre block"># 复制 hook
 cp -r hooks/openclaw ~/.openclaw/hooks/self-improvement
 
 # 启用
