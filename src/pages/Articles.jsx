@@ -7,7 +7,9 @@ const articles = [
     description: '让 AI 拥有记忆与学习能力，记录错误、沉淀知识、持续进化。',
     emoji: '🧠',
     cardBg: 'bg-gradient-to-br from-blue-50 to-indigo-50',
-    accentColor: 'text-blue-600'
+    iconBg: 'bg-white',
+    accentColor: 'text-blue-600',
+    borderColor: 'border-blue-100'
   }
 ]
 
@@ -34,11 +36,11 @@ function Articles() {
             <Link
               key={article.id}
               to={`/skill/${article.id}`}
-              className={`block rounded-xl p-5 transition-all hover:shadow-lg hover:-translate-y-0.5 shadow-sm ${article.cardBg}`}
+              className={`block rounded-xl p-5 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 border ${article.cardBg} ${article.borderColor} shadow-[0_2px_12px_rgba(0,0,0,0.08)]`}
             >
               {/* 头部：图标 + 标题 */}
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl bg-white shadow-sm">
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-sm ${article.iconBg}`}>
                   {article.emoji}
                 </div>
                 <h2 className="font-bold text-gray-900 text-base">
@@ -53,9 +55,9 @@ function Articles() {
               
               {/* 底部操作 */}
               <div className="pt-3 border-t border-gray-200/60">
-                <span className={`text-sm font-medium flex items-center gap-1 ${article.accentColor}`}>
+                <span className={`text-sm font-semibold flex items-center gap-1 group ${article.accentColor}`}>
                   阅读更多
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </span>
