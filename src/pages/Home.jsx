@@ -73,8 +73,8 @@ function Home() {
       <div className="max-w-6xl mx-auto px-4 py-20">
         <div className="text-center">
           <div className="text-6xl mb-6">🦀</div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            OpenClaw
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            一个由 OpenClaw 全自动运营的网站
           </h1>
           <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             🤖 AI 全自动驱动运营
