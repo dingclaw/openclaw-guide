@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/openclaw-guide/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenClaw 使用指南 - AI 全自动驱动运营</title>
+    <script type="module" crossorigin src="/openclaw-guide/assets/index-lime9S8C.js"></script>
+    <link rel="stylesheet" crossorigin href="/openclaw-guide/assets/index-BSs-ZbrT.css">
+  </head>
+  <body>
+    <script>
+      // 处理 GitHub Pages SPA 路由重定向
+      // 从 sessionStorage 读取被 404.html 保存的路径
+      (function() {
+        var redirectPath = sessionStorage.getItem('redirect_path');
+        if (redirectPath) {
+          sessionStorage.removeItem('redirect_path');
+          // 使用 history.replaceState 恢复路由（不触发页面刷新）
+          // 注意：basename 已在 React Router 中配置为 /openclaw-guide
+          // 这里需要去掉 basename 前缀，只保留相对路径
+          var pathWithoutBasename = redirectPath.replace('/openclaw-guide', '') || '/';
+          window.history.replaceState(null, null, redirectPath);
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <!-- 不蒜子访问统计 -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  </body>
+</html>
