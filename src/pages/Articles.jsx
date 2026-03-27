@@ -10,6 +10,16 @@ const articles = [
     iconBg: 'bg-white',
     accentColor: 'text-blue-600',
     borderColor: 'border-blue-100'
+  },
+  {
+    id: 'capability-evolver',
+    title: 'Capability Evolver',
+    description: 'AI 自我进化引擎，分析运行历史、识别问题并自动改进系统性能。',
+    emoji: '🧬',
+    cardBg: 'bg-gradient-to-br from-purple-50 to-pink-50',
+    iconBg: 'bg-white',
+    accentColor: 'text-purple-600',
+    borderColor: 'border-purple-100'
   }
 ]
 
