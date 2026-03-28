@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom'
 
 const articles = [
   {
+    id: 'god-perspective',
+    title: '上帝视角：更高维度的 AI 智能体架构思考',
+    description: '在多智能体系统中，是否存在一个"上帝视角"？从更高维度重新思考智能体的协作与进化。',
+    emoji: '🔭',
+    cardBg: 'bg-gradient-to-br from-amber-50 to-orange-50',
+    iconBg: 'bg-white',
+    accentColor: 'text-amber-600',
+    borderColor: 'border-amber-100'
+  },
+  {
     id: 'self-improvement',
     title: 'Self-Improving Agent',
     description: '让 AI 拥有记忆与学习能力，记录错误、沉淀知识、持续进化。',
