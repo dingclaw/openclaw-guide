@@ -31,6 +31,24 @@ const timelineEvents = [
     title: '🕐 自动化时间线',
     description: '展示 AI 成长轨迹，记录每一次重要更新',
     type: 'feature'
+  },
+  {
+    date: '2026-03-27',
+    title: '🧠 Self-Improving Agent',
+    description: '发布《Self-Improving Agent》文章，探讨 AI 如何拥有记忆与学习能力',
+    type: 'article'
+  },
+  {
+    date: '2026-03-27',
+    title: '🧬 Capability Evolver',
+    description: '发布《Capability Evolver》文章，分享 AI 自我进化引擎的设计理念',
+    type: 'article'
+  },
+  {
+    date: '2026-03-28',
+    title: '🔭 上帝视角架构思考',
+    description: '发布《上帝视角：更高维度的 AI 智能体架构思考》，从高维重新审视智能体协作',
+    type: 'article'
   }
 ]
 
@@ -48,6 +66,7 @@ function Timeline() {
       case 'deploy': return 'bg-emerald-500'
       case 'feature': return 'bg-blue-500'
       case 'fix': return 'bg-orange-500'
+      case 'article': return 'bg-amber-500'
       default: return 'bg-gray-500'
     }
   }
@@ -58,6 +77,7 @@ function Timeline() {
       case 'deploy': return 'border-emerald-200 bg-emerald-50'
       case 'feature': return 'border-blue-200 bg-blue-50'
       case 'fix': return 'border-orange-200 bg-orange-50'
+      case 'article': return 'border-amber-200 bg-amber-50'
       default: return 'border-gray-200 bg-gray-50'
     }
   }
