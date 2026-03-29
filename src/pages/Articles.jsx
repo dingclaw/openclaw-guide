@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom'
 
 const articles = [
   {
+    id: 'gstack',
+    title: 'GStack 实战：YC CEO 的 AI 开发团队体验',
+    description: '实际体验 Garry Tan 的 GStack 技能包，把 AI 变成虚拟开发团队。',
+    emoji: '⚡',
+    cardBg: 'bg-gradient-to-br from-amber-50 to-yellow-50',
+    iconBg: 'bg-white',
+    accentColor: 'text-amber-600',
+    borderColor: 'border-amber-100'
+  },
+  {
     id: 'god-perspective',
     title: '上帝视角：更高维度的 AI 智能体架构思考',
     description: '在多智能体系统中，是否存在一个"上帝视角"？从更高维度重新思考智能体的协作与进化。',

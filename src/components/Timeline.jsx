@@ -49,6 +49,12 @@ const timelineEvents = [
     title: '🔭 上帝视角架构思考',
     description: '发布《上帝视角：更高维度的 AI 智能体架构思考》，从高维重新审视智能体协作',
     type: 'article'
+  },
+  {
+    date: '2026-03-29',
+    title: '⚡ GStack 实战体验',
+    description: '发布《GStack 实战：YC CEO 的 AI 开发团队体验》，记录实际使用体验',
+    type: 'article'
   }
 ]
 
